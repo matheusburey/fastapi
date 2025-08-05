@@ -38,7 +38,7 @@ def upgrade() -> None:
     sa.Column('ordem', sa.Integer(), nullable=False),
     sa.Column('obrigatoria', sa.Boolean(), nullable=True),
     sa.Column('sub_pergunta', sa.Boolean(), nullable=True),
-    sa.Column('tipo_pergunta', sa.Enum('BOOLEANO', 'MULTIPLA_ESCOLHA', 'UNICA_ESCOLHA', 'TEXTO_LIVRE', 'INTEIRO', 'DECIMAL', name='tipoperguntaenum'), nullable=False),
+    sa.Column('tipo_pergunta', sa.Enum('SIM_NAO', 'MULTIPLA_ESCOLHA', 'UNICA_ESCOLHA', 'TEXTO_LIVRE', 'INTEIRO', 'DECIMAL', name='tipoperguntaenum'), nullable=False),
     sa.ForeignKeyConstraint(['id_formulario'], ['formulario.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
